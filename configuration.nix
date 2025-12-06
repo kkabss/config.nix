@@ -42,25 +42,28 @@
       options = "--delete-older-than 3d";
     };
 
-  services.xserver.enable = true;
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.displayManager.lightdm.greeters.gtk = {
-    enable = true;
-   
-   theme = {
+  services.xserver = { 
+  enable = true;
+  desktopManager.xfce.enable = true;
+  displayManager.lightdm.enable = true;
+  displayManager.lightdm.greeters.gtk = {
+  enable = true;
+  theme = {
     name = "Adwaita-dark";
-    };
-
-   extraConfig = ''
-    background = "/wallpapers/ig636-wallpaper.cam.png";
-    '';
   };
-  
-  services.xserver.desktopManager.xfce.enable = true;
-
-  services.xserver.xkb = {
+  extraConfig = ''
+    background = "/etc/nixos/wallpapers/ig636-wallpaper.cam.png";
+  '';
+ };
+  xkb = {
     layout = "br";
     variant = "";
+    };
+  };
+
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
   };
 
   console.keyMap = "br-abnt2";
@@ -80,9 +83,7 @@
     description = "kabs";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-     
      chromium 
-
     ];
   };
 
@@ -96,17 +97,26 @@
    git
    curl
    fastfetch
-   vim
    gamemode
    tealdeer
    xclip
    bat
+
+   hyprpaper
+   waybar
+   alacritty
+   neovim
+   rofi
   ];
 
   # List services that you want to enable:
 
   programs.steam.enable = true;
-
+ 
+  fonts.packages = with pkgs; [
+      nerd-fonts.jetbrains-mono
+  ];
+  
   # programs.fish.enable = true;
 
   # This value determines the NixOS release from which the default

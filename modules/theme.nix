@@ -1,0 +1,42 @@
+{ config, pkgs, ... }:
+
+{
+  home.packages = with pkgs; [
+    adwaita-icon-theme
+    pkgs.papirus-icon-theme
+    gnome-themes-extra
+  ];
+
+  gtk = {
+    enable = true;
+    theme.name = "Adwaita-dark";
+    iconTheme.name = "Papirus";
+    cursorTheme = {
+      name = "Adwaita";
+      package = pkgs.adwaita-icon-theme;
+      size = 24;
+    };
+  };
+
+  xdg.configFile."gtk-3.0/settings.ini".text = ''
+    [Settings]
+    gtk-theme-name=Adwaita-dark
+    gtk-icon-theme-name=Papirus
+    gtk-cursor-theme-name=Adwaita
+    gtk-cursor-theme-size=24
+  '';
+
+  xdg.configFile."gtk-4.0/settings.ini".text = ''
+    [Settings]
+    gtk-theme-name=Adwaita-dark
+    gtk-icon-theme-name=Papirus
+    gtk-cursor-theme-name=Adwaita
+    gtk-cursor-theme-size=24
+  '';
+
+  home.sessionVariables = {
+    XCURSOR_THEME = "Adwaita";
+    XCURSOR_SIZE = "24";
+  };
+}
+
