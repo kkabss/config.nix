@@ -22,6 +22,7 @@
   ];  
 
   home.packages = with pkgs; [
+    pkgs.papirus-icon-theme
     cowsay
     cmatrix
   ];

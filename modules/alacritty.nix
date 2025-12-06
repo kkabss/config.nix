@@ -13,7 +13,7 @@
 
     font = {
       normal = {
-        family = "JetBrainsMono";
+       #  family = "JetBrainsMono";
       };
       size = 11.0;
     };
