@@ -43,7 +43,6 @@
     };
 
   services.xserver.enable = true;
-
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.displayManager.lightdm.greeters.gtk = {
     enable = true;
