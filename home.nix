@@ -17,6 +17,10 @@
     };
   };
 
+    imports = [
+       ./modules/alacritty.nix
+  ];  
+
   home.packages = with pkgs; [
     cowsay
     cmatrix
