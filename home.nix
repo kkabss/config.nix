@@ -14,7 +14,6 @@
       rebuildup = "sudo nixos-rebuild switch --upgrade";
       updategit = "sudo cp -rf /etc/nixos/* /home/kabs/nixconfig/; cd /home/kabs/nixconfig; git add .; git commit -ma; git push kabs main";
       config = "sudo -E nvim /etc/nixos/";
-      sudo = "sudo -E";
     };
   };
 
