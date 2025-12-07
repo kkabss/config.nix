@@ -27,6 +27,7 @@
   home.file.".config/hypr".source = ./config/hyprland;
   home.file.".config/rofi".source = ./config/rofi;
   home.file.".config/waybar".source = ./config/waybar;
+  home.file.".config/fastfetch".source = ./config/fastfetch;
 
   home.packages = with pkgs; [
     cowsay
