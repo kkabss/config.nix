@@ -44,18 +44,9 @@
 
   services.xserver = { 
   enable = true;
-  desktopManager.xfce.enable = true;
-  displayManager.lightdm.enable = true;
+  desktopManager.gnome.enable = true;
+  displayManager.gdm.enable = true;
   videoDrivers = [ "intel" ];
-  displayManager.lightdm.greeters.gtk = {
-  enable = true;
-  theme = {
-    name = "Adwaita-dark";
-  };
-  extraConfig = ''
-    background = "/etc/nixos/wallpapers/ig636-wallpaper.cam.png";
-  '';
- };
   xkb = {
     layout = "br";
     variant = "";

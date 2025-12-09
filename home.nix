@@ -12,7 +12,7 @@
       ff = "fastfetch";
       rebuild = "sudo nixos-rebuild switch";
       rebuildup = "sudo nixos-rebuild switch --upgrade";
-      updategit = "sudo cp -rf /etc/nixos/* /home/kabs/nixconfig/; cd /home/kabs/nixconfig; git add .; git commit -a; git push kabs main";
+      updategit = "sudo cp -rf /etc/nixos/* /home/kabs/config.nix/; cd /home/kabs/config.nix/; git add .; git commit -a; git push kabs main";
       config = "sudo -E nvim /etc/nixos/";
       s = "sudo";
       se = "sudo -E";
