@@ -103,6 +103,8 @@
    tealdeer
    xclip
    bat
+   zip
+   unzip
 
    hyprpaper
    waybar
