@@ -46,6 +46,7 @@
   enable = true;
   desktopManager.xfce.enable = true;
   displayManager.lightdm.enable = true;
+  videoDrivers = [ "intel" ];
   displayManager.lightdm.greeters.gtk = {
   enable = true;
   theme = {
@@ -60,6 +61,8 @@
     variant = "";
     };
   };
+ 
+  powerManagement.cpuFreqGovernor = "performance";
 
   programs.hyprland = {
     enable = true;
@@ -97,7 +100,6 @@
    git
    curl
    fastfetch
-   gamemode
    tealdeer
    xclip
    bat
@@ -112,7 +114,8 @@
   # List services that you want to enable:
 
   programs.steam.enable = true;
- 
+  programs.gamemode.enable = true;
+
   fonts.packages = with pkgs; [
       nerd-fonts.jetbrains-mono
   ];
