@@ -25,7 +25,7 @@
 
   home.file.".config/nvim".source = ./config/nvim;
   home.file.".config/alacritty".source = ./config/alacritty;
-  home.file.".config/hypr".source = ./config/hyprland;
+  home.file.".config/hypr".source = ./config/hypr;
   home.file.".config/rofi".source = ./config/rofi;
   home.file.".config/waybar".source = ./config/waybar;
   home.file.".config/fastfetch".source = ./config/fastfetch;
